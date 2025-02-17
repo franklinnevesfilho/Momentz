@@ -2,14 +2,14 @@ import React from 'react';
 import {View} from "react-native";
 import {ThemedText} from "@/components/ThemedText";
 
-function Explore() {
+function Chat() {
     return (
         <View>
             <ThemedText>
-                Search PAge
+                Chat Screen
             </ThemedText>
         </View>
     );
 }
 
-export default Explore;
+export default Chat;

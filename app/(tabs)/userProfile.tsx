@@ -2,14 +2,14 @@ import React from 'react';
 import {View} from "react-native";
 import {ThemedText} from "@/components/ThemedText";
 
-function Explore() {
+function UserProfile() {
     return (
         <View>
             <ThemedText>
-                Search PAge
+                Profile Screen
             </ThemedText>
         </View>
     );
 }
 
-export default Explore;
+export default UserProfile;

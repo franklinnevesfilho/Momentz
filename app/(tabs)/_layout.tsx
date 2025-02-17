@@ -8,6 +8,10 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+// Icons
+
+import {AddIcon, ChatIcon, HomeIcon, ProfileIcon, SearchIcon} from '@/assets/icons'
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -30,16 +34,38 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <HomeIcon color={color} />,
         }}
       />
+        <Tabs.Screen
+            name="explore"
+            options={{
+                title: 'Explore',
+                tabBarIcon: ({ color }) => <SearchIcon color={color}/>,
+            }}
+        />
       <Tabs.Screen
-        name="explore"
+        name="content"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+            title: '',
+          tabBarIcon: ({ color }) => <AddIcon color={color} />,
         }}
       />
+        <Tabs.Screen
+            name="chat"
+            options={{
+                title: 'Chat',
+                tabBarIcon: ({ color }) => <ChatIcon color={color} />,
+            }}
+        />
+        <Tabs.Screen
+            name="userProfile"
+            options={{
+                title: 'Profile',
+                tabBarIcon: ({ color }) => <ProfileIcon color={color}  />,
+            }}
+        />
     </Tabs>
+
   );
 }
